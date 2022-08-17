@@ -1,6 +1,9 @@
 {
   "name": "@seed-design/stylesheet",
   "version": "1.0.0-beta.4",
+  "scripts": {
+    "build": "echo \"OK\""
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/daangn/seed-design.git",
