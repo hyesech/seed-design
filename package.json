@@ -10,7 +10,9 @@
     "build": "ultra -r build",
     "build:dts": "ultra -r --build build:dts",
     "clean": "ultra -r clean",
-    "dev": "ultra -r dev"
+    "dev": "ultra -r dev",
+    "publish": "lerna publish",
+    "publish:all": "lerna publish --force"
   },
   "devDependencies": {
     "@changesets/cli": "^2.17.0",
@@ -19,6 +21,7 @@
     "@storybook/manager-webpack5": "^6.5.0",
     "@storybook/react": "^6.5.0",
     "@types/react": "^18.0.17",
+    "lerna": "4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "storybook-addon-root-attribute": "^1.0.2",
