@@ -1,6 +1,6 @@
 import { PolymorphicProps, PolymorphicRef } from "@seed-design/react-shared";
 import React, { ElementType, ReactElement } from "react";
-import { clsx } from "clsx";
+// import { clsx } from "clsx";
 
 type HeadingProps<E extends ElementType = "span"> = PolymorphicProps<E> & {
   type: "h1" | "h2" | "h3" | "h4";
@@ -15,7 +15,7 @@ function Heading<E extends ElementType = "span">(
   return (
     <Element
       ref={ref}
-      className={clsx(`seed-typography-${props.type}`, props.className)}
+      // className={clsx(`seed-typography-${props.type}`, props.className)}
     >
       {props.children}
     </Element>
