@@ -1,0 +1,64 @@
+---
+slug: /components/spec/switch/style
+title: Switch
+description: Switches allow users to turn an individual option on or off. They are usually used to activate or deactivate a specific setting.
+---
+
+## Anatomy
+
+1. Root - Primitive.Root
+2. Track - Primitive.Control
+3. Handle
+
+## Visually Representated States
+
+| State    | Condition                                                                   |
+| -------- | --------------------------------------------------------------------------- |
+| enabled  | isDisabled = False, isHovered = False, isFocused = False, isPressed = False |
+| hovered  | isDisabled = False, isPressed = False, isHovered = True                     |
+| focused  | isDisabled = False, isPressed = False, isFocused = True                     |
+| pressed  | isDisabled = False, isPressed = True                                        |
+| disabled | isDisabled = True                                                           |
+
+| State      | Condition          |
+| ---------- | ------------------ |
+| unselected | isSelected = False |
+| selected   | isSelected = True  |
+
+## 디자인 결정 (Color)
+
+| State    | Part               | Attribute | Value                      |
+| -------- | ------------------ | --------- | -------------------------- |
+| Enabled  | Track (unselected) | Color     | $scale.color.gray-500      |
+|          | Track (selected)   | Color     | $semantic.color.primary    |
+|          | Handle             | Color     | $semantic.color.on-primary |
+| Hovered  | Track (unselected) | Color     | $scale.color.gray-500      |
+|          | Track (selected)   | Color     | $semantic.color.primary    |
+|          | Handle             | Color     | $semantic.color.on-primary |
+| Pressed  | Track (unselected) | Color     | $scale.color.gray-500      |
+|          | Track (selected)   | Color     | $semantic.color.primary    |
+|          | Handle             | Color     | $semantic.color.on-primary |
+| Disabled | Track              | Opacity   | 38%                        |
+|          | Track (unselected) | Color     | $scale.color.gray-500      |
+|          | Track (selected)   | Color     | $semantic.color.primary    |
+|          | Handle             | Opacity   | 38%                        |
+|          |                    | Color     | $semantic.color.on-primary |
+
+## 디자인 결정 (Layout)
+
+| Part   | Attribute     | Value  |
+| ------ | ------------- | ------ |
+| Root   | Height        | 42pt   |
+|        | Width         | 52pt   |
+| Track  | Height        | 30pt   |
+|        | Width         | 52pt   |
+|        | Corner Radius | Pill   |
+| Handle | Size          | 26pt   |
+|        | Corner Radius | Circle |
+
+## 디자인 결정 (Motion)
+
+| Part   | Attribute       | Value       |
+| ------ | --------------- | ----------- |
+| Handle | Duration        | 130ms       |
+|        | Timing Function | ease-in-out |
